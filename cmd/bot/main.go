@@ -10,8 +10,10 @@ import (
 
 func main() {
 	token := os.Getenv("DISCORD_BOT_TOKEN")
-	if token == "" {
-		token = "YOUR_DISCORD_BOT_TOKEN"
+	if token == "" || token == "YOUR_DISCORD_BOT_TOKEN" {
+		log.Println("DISCORD_BOT_TOKEN not set or is placeholder. Exiting gracefully.")
+		log.Println("Set DISCORD_BOT_TOKEN environment variable in Railway to enable the bot.")
+		select {}
 	}
 
 	backendURL := os.Getenv("BACKEND_URL")

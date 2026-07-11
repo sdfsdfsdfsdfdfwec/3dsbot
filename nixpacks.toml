@@ -1,5 +1,8 @@
+[phases]
+setup = []
+
 [build]
-setup = ["curl -sSf https://raw.githubusercontent.com/charmbracelet/mods/main/install.sh | sh"]
+build = ["go build -o bot ./cmd/bot"]
 
 [deploy]
 start = ["./bot"]
