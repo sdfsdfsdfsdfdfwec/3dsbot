@@ -1,0 +1,5 @@
+[build]
+setup = ["curl -sSf https://raw.githubusercontent.com/charmbracelet/mods/main/install.sh | sh"]
+
+[deploy]
+start = ["./bot"]
